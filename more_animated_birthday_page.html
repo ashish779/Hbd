@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+      color: #333;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      z-index: 2;
+      max-width: 600px;
+      animation: pulse 2s infinite, fadeIn 2s ease;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
+    .card h1 {
+      font-size: 2.2em;
+      color: #ff4081;
+      animation: popIn 1s ease forwards;
+    }
+
+    .card p {
+      font-size: 1.2em;
+      margin: 15px 0;
+      animation: fadeInText 2s ease both;
+    }
+
+    .card p:nth-of-type(2) { animation-delay: 0.4s; }
+    .card p:nth-of-type(3) { animation-delay: 0.8s; }
+    .card p:nth-of-type(4) { animation-delay: 1.2s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      80% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .confetti, .emojis {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .confetti span, .emojis span {
+      position: absolute;
+      font-size: 1.5rem;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    .emojis span {
+      font-size: 2rem;
+      animation: floatEmoji 10s infinite ease-in-out;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100vh) rotate(0deg); opacity: 0.5; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+
+    @keyframes floatEmoji {
+      0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+      30% { opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="confetti">
+    <span style="left: 5%; animation-duration: 6s;">🎊</span>
+    <span style="left: 15%; animation-duration: 5s;">🎉</span>
+    <span style="left: 25%; animation-duration: 7s;">🎂</span>
+    <span style="left: 35%; animation-duration: 4s;">🎁</span>
+    <span style="left: 45%; animation-duration: 6s;">🎈</span>
+    <span style="left: 55%; animation-duration: 5.5s;">🎉</span>
+    <span style="left: 65%; animation-duration: 4.5s;">🎂</span>
+    <span style="left: 75%; animation-duration: 6.5s;">🎊</span>
+    <span style="left: 85%; animation-duration: 5s;">🎁</span>
+    <span style="left: 95%; animation-duration: 6s;">🎈</span>
+  </div>
+  <div class="emojis">
+    <span style="left: 20%; animation-delay: 0s;">💖</span>
+    <span style="left: 40%; animation-delay: 2s;">💫</span>
+    <span style="left: 60%; animation-delay: 4s;">🌟</span>
+    <span style="left: 80%; animation-delay: 6s;">💐</span>
+  </div>
+  <div class="card">
+    <h1>🎉 Happy Birthday!</h1>
+    <p>Wishing you a very Happy Birthday! May your day be filled with joy and smiles. 🌸</p>
+    <p>Your presence adds light wherever you go — stay amazing always! ✨</p>
+    <p>Why did the cupcake go to the party? Because it was ready to have a sweet time! 🧁😄</p>
+  </div>
+</body>
+</html>
